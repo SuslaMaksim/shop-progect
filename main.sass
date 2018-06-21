@@ -1,3 +1,228 @@
+$font-weight: 400
+$font-size: 20px
+$line-height: 1.4
+$font-family: Montserrat
+$color: #28292b
+$color-blue: #012454
+
 body 
-	background: white
-	color: blue
+	font: $font-weight $font-size $line-height $font-family
+	color: $color
+	background: #FFF
+
+.main-wrapper
+	padding: 0
+	min-width: 320px
+	position: relative
+	overflow: hidden
+	opacity: 1
+	min-height: 100%
+
+img
+	display: block
+	min-width: 100%
+
+span
+	display: inline-block
+	
+
+/************************HEADER***********************/
+
+.header
+	height: 80px
+	background-color: #ffffff
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 0 30px
+	border-bottom: 1px solid #cecece
+	font-family: $font-family
+
+.logo
+	margin-right: 40px
+	&__maks
+		color: #03359b
+		font-weight: 600
+	
+	
+
+.main-menu
+	list-style: none
+	display: flex
+	margin-right: 60px
+	&__linc
+		color: $color
+		display: block
+		line-height: 80px
+		padding: 0 20px
+		font-size: 14px
+		[class*="icon"]
+			position: absolute
+			font-size: 8px
+			color: $color-blue
+			right: 4px
+			top: 48%
+
+.dropdown
+	position: relative
+	&:hover
+		.dropdown-content
+				opacity: 1
+				margin-top: 0px
+				left: -10px
+				visibility: visible
+	&--right
+		&:hover
+			.dropdown-content
+				left: auto
+				right: -30px
+		.dropdown-content
+			&:before
+				right: 35px
+
+			&:after
+				right: 33px
+	&--white
+		.dropdown-content
+			background: #ffffff
+			border: 1px solid #cecece
+			border-top: 1px solid #fffff
+			padding: 0px
+			&:before
+				border-bottom-color: #fff
+				z-index: 1
+			&:after
+				position: absolute
+				content: ""
+				display: block
+				border-left: 8px solid transparent
+				border-right:  8px solid transparent
+				border-bottom: 10px solid #cecece
+				bottom: 100%
+
+
+			
+
+
+.dropdown-content
+	position: absolute
+	background: $color
+	padding: 30px
+	width: 240px
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.5s, margin-top 0.5s
+	margin-top: 10px
+	top: 100%
+	left: -10000px
+	&:before
+		position: absolute
+		content: ""
+		display: block
+		border-left: 6px solid transparent
+		border-right:  6px solid transparent
+		border-bottom: 8px solid 
+		bottom: 100%
+
+
+.dropdown-menu
+	list-style: none
+	&__item
+		margin-bottom: 8px
+		&__last-child
+			margin-bottom: 0px
+	&__linc
+		font-size: 12px
+		color: #bcbcbc
+		&:hover
+			color: #fff;
+
+.search
+	flex: 1
+	position: relative
+	margin-right: 70px
+	[type="text"]::placeholder
+		font-size: 12px
+	&__input
+		width: 100%
+		padding: 0 40px 0 20px
+		height: 30px
+		background-color: #f6f6f6
+		color: $color
+		font-family: sans-sherif, "PT Serif"
+		font-size: 14px
+		border: none
+		border-radius: 20px
+
+	&__button
+		position: absolute
+		font-family: 'icomoon' !important;
+		background-color: transparent
+		border: none
+		font-size: 16px
+		top: 7px
+		right: 8px
+		color: $color
+.location
+	margin-right: 50px
+	&__linc
+		vertical-align: middle
+		font-family: $font-family
+		color: #868686
+		font-size: 14px
+	[class*="icon"]
+			vertical-align: middle
+			font-size: 16px
+			margin-right: 10px
+			color: $color
+
+.profile-menu 
+	display: flex
+	list-style: none
+	&__item
+		position: relative
+	&__linc
+		line-height: 80px
+		display: block
+	[class*="icon"]
+		   vertical-align: middle
+		   font-size: 16px
+		   padding: 0 10px 0 25px
+		   color: $color
+		   vertical-align: middle
+.b-price
+	vertical-align: middle
+	font-weight: 700
+	color: $color
+.basket
+	line-height: $line-height
+	position: relative
+
+.bage
+	position: absolute
+	min-width: 15px
+	height: 15px
+	display: inline-block
+	background-color: $color-blue
+	border-radius: 50%
+	line-height: 15px
+	font-size: 10px
+	color: #ffffff
+	text-align: center
+	right: -1px
+	top: -4px
+
+.file-menu
+	list-style: none
+	&__item
+		border-bottom: 1px solid #ececec
+		&:last-child
+			border-bottom: none
+	&__linc
+		display: block
+		padding: 0 20px
+		font-size: 12px
+		color: $color
+		font-weight: 400
+		line-height: 40px
+		font-family: $font-family
