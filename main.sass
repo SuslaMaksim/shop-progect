@@ -3,7 +3,8 @@ $font-size: 20px
 $line-height: 1.4
 $font-family: Montserrat
 $color: #28292b
-$color-blue: #012454
+$color-blue: #4286f4
+$color-red: red
 
 body 
 	font: $font-weight $font-size $line-height $font-family
@@ -24,9 +25,19 @@ img
 
 span
 	display: inline-block
-	
-
+/************************btn***********************/
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	color: #fff
+	height: 30px
+	background-color: $color-blue
+	border-radius: 20px
+	padding: 0 25px
+	font-size: 12px
 /************************HEADER***********************/
+
 
 .header
 	height: 80px
@@ -41,7 +52,7 @@ span
 .logo
 	margin-right: 40px
 	&__maks
-		color: #03359b
+		color: #4286f4
 		font-weight: 600
 	
 	
@@ -110,6 +121,7 @@ span
 	padding: 30px
 	width: 240px
 	opacity: 0
+	z-index: 99
 	visibility: hidden
 	transition: opacity 0.5s, margin-top 0.5s
 	margin-top: 10px
@@ -164,6 +176,8 @@ span
 		right: 8px
 		color: $color
 .location
+	display: flex
+	align-items: center
 	margin-right: 50px
 	&__linc
 		vertical-align: middle
@@ -173,7 +187,7 @@ span
 	[class*="icon"]
 			vertical-align: middle
 			font-size: 16px
-			margin-right: 10px
+			margin-right: 15px
 			color: $color
 
 .profile-menu 
@@ -190,6 +204,8 @@ span
 		   padding: 0 10px 0 25px
 		   color: $color
 		   vertical-align: middle
+	.dropdown-content
+		width: auto
 .b-price
 	vertical-align: middle
 	font-weight: 700
@@ -206,7 +222,7 @@ span
 	background-color: $color-blue
 	border-radius: 50%
 	line-height: 15px
-	font-size: 10px
+	font-size: 11px
 	color: #ffffff
 	text-align: center
 	right: -1px
@@ -214,15 +230,155 @@ span
 
 .file-menu
 	list-style: none
+	width: 200px
 	&__item
-		border-bottom: 1px solid #ececec
+		border-bottom: 1px solid #ccc
 		&:last-child
 			border-bottom: none
 	&__linc
-		display: block
-		padding: 0 20px
+		display: flex
+		align-items: center
+		padding: 0 5px
 		font-size: 12px
 		color: $color
 		font-weight: 400
 		line-height: 40px
 		font-family: $font-family
+		[class*="icon"]
+		   font-size: 16px
+		   color: #ccc
+		   width: 16px
+		   text-align: center
+		   margin-right: 30px
+	[class="bage"]
+		position: relative
+		margin-left: auto
+		right: 0
+		top: 0
+
+.cart
+	width: 300px
+	&-list
+		list-style: none
+		&__item
+			border-bottom: 1px solid #ccc
+			display: flex
+			padding: 10px
+			align-items: center
+		&__img
+			flex: none
+			text-align: center
+			margin-right: 20px
+			width: 60px
+			img
+				display: inline-block
+				max-width: 100%
+		&__info
+			.product__title
+				margin-bottom: 10px
+		&__details
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+		&__delited
+			flex: none
+			[class*="icon"]
+			   font-size: 12px
+			   color: #b8b8b8
+			   text-align: center
+			   padding: 0px 15px
+			   transition: all 0.2s linear
+			   &:hover
+			   		color: $color
+	&-footer
+		display: flex
+		align-items: center
+		padding: 20px 10px 
+		.total
+			width: 60px
+			flex: none
+			text-align: right
+			margin-right: 20px
+		.price
+			margin-right: 28px
+
+.total
+	font-weight: 400
+	font-size: 10px
+	color: #b8b8b8
+	font-style: italic
+	line-height: 18px
+
+.price
+	font-size: 12px
+	font-weight: 700
+	letter-spacing: 1.2px
+	font-family: $font-family
+
+.product
+	&__title
+		color: $color
+		font-size: 12px
+		font-weight: 400
+		a
+			color: inherit
+			&:hover
+				text-decoration: underline
+				
+	&__details
+		font-weight: 400
+		font-size: 10px
+		color: #b8b8b8
+		font-style: italic
+		line-height: 18px
+
+
+/************************MEIN***********************/
+.header-inner
+	position: relative
+	background-position: right center
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 20px 30px
+	height: 180px
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+
+	&__title
+		color: $color
+		font-size: 48px
+		font-weight: 400
+	.category
+		display: block
+	.bread-crambs
+		position: absolute
+		left: 30px
+		top: 50%
+		transform: translate(0, -50%)
+		
+.bread-crambs
+	display: flex
+	list-style: none
+	&__item
+		margin-right: 5px
+	&__linc
+		color: #b8b8b8
+		font-size: 12px
+		font-weight: 400
+		font-family: $font-family
+		&:hover
+			color: $color
+
+
+
+.category
+	font-size: 12px
+	font-weight: 700
+	color: $color-blue
+	font-family: $font-family
+	latter-spacing: 1.2px
+	text-transform: uppercase
+
